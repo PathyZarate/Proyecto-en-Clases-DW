@@ -1,4 +1,2 @@
 #Los OG
-├─ Imagenes
-     └─ logo.jpg
-├─ README.md
+![logo](/Imagenes/logo.jpeg)
