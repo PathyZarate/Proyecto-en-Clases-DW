@@ -13,46 +13,25 @@
 <body>
   	
   	<div class="wireframe-6">
-    		<div class="rectangle-parent">
-      			<div class="group-child">
-      			</div>
-      			<div class="field-parent">
-        				<div class="field">
-          					<div class="descripcion">Dirección de correo electrónico</div>
-        				</div>
-        				<div class="field1">
-          					<div class="descripcion">Ingresa tu contraseña</div>
-        				</div>
-        				<div class="sign-in-button" id="signInButton">
-          					<div class="iniciar-sesion">Iniciar sesion</div>
-        				</div>
-        				<b class="iniciar-sesion1">Iniciar sesion</b>
-        				<div class="direccin-de-correo">Dirección de correo electrónico</div>
-        				<div class="contrasea">Contraseña</div>
-        				<div class="proporcione-su-informacin">Proporcione su información para iniciar sesión en su cuenta.</div>
-        				<div class="descripcion2" id="descripcionContainer">
-          					<div class="no-tienes-una">¿No tienes una cuenta?</div>
-          					<div class="resgistrate">Resgistrate</div>
-        				</div>
-      			</div>
-    		</div>
+    	<div class="rectangle-parent">
+      		<div class="group-child">
+      		</div>
+      		<form class="field-parent" id="formulario">
+        		<b class="iniciar-sesion1">Iniciar sesion</b>
+				<label for="gmail" class="direccin-de-correo">Dirección de correo electrónico</label>
+				<input type="text" id="gmail" class="field" placeholder="Dirección de correo electrónico">
+				<label for="password" class="contrasea">Contraseña</label>
+				<input type="password" id="password" class="field1" placeholder="Ingresa tu contraseña">
+        		<div class="proporcione-su-informacin">Proporcione su información para iniciar sesión en su cuenta.</div>
+				<button type="submit" class="sign-in-button" id="signInButton">Iniciar sesion</button>
+				<div class="descripcion2" id="descripcionContainer">
+          			<div class="no-tienes-una">¿No tienes una cuenta?</div>
+          			<div class="resgistrate">Resgistrate</div>
+        		</div>
+      		</form>
+    	</div>
   	</div>
   	
+	<script src="./JS/login.js"></script>
   	
-  	
-  	
-  	<script>
-    		var signInButton = document.getElementById("signInButton");
-    		if(signInButton) {
-      			signInButton.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var descripcionContainer = document.getElementById("descripcionContainer");
-    		if(descripcionContainer) {
-      			descripcionContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
 </html>
