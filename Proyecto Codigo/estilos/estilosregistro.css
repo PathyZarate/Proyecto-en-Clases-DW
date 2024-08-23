@@ -49,6 +49,18 @@ body {
     color: #431414;
     text-align: left;
 }
+.nombre {
+    position: absolute;
+    top: 125px;
+    left: calc(50% - 172px);
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 150%;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1e1e1e;
+    text-align: left;
+}
 .apellido {
     position: absolute;
     top: 125px;
@@ -65,6 +77,18 @@ body {
     position: absolute;
     top: 196px;
     left: calc(50% - 172px);
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 150%;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1e1e1e;
+    text-align: left;
+}
+.contrasea {
+    position: absolute;
+    top: 270px;
+    left: calc(50% - 174px);
     font-size: 14px;
     letter-spacing: -0.01em;
     line-height: 150%;

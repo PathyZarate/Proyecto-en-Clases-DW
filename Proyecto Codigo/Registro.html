@@ -13,56 +13,39 @@
 <body>
   	
   	<div class="registro">
-    		<div class="rectangle-parent">
-      			<div class="group-child">
-      			</div>
-      			<div class="sign-in-button-parent">
-        				<div class="sign-in-button" id="signInButton">
-          					<div class="registrarse">Registrarse</div>
-        				</div>
-        				<b class="registrarse1">registrarse</b>
-        				<div class="apellido">Apellido</div>
-        				<div class="direccin-de-correo">Dirección de correo electrónico</div>
-        				<div class="confimar-contrasea">Confimar Contraseña</div>
-        				<div class="por-favor-proporcinenos">Por favor proporciónenos su información para crear su cuenta</div>
-        				<div class="ya-tienes-una-cuenta-parent">
-          					<div class="ya-tienes-una">¿Ya tienes una cuenta?</div>
-          					<div class="iniciar-sesin" id="iniciarSesinText">Iniciar sesión</div>
-        				</div>
-        				<div class="name-field">
-          					<div class="descripcion">Ingrese su nombre</div>
-        				</div>
-        				<div class="name-field1">
-          					<div class="descripcion">Ingrese su apellido</div>
-        				</div>
-        				<div class="field">
-          					<div class="descripcion">Contact@gmail.com</div>
-        				</div>
-        				<div class="field1">
-          					<div class="descripcion">************</div>
-        				</div>
-        				<div class="field2">
-          					<div class="descripcion">************</div>
-        				</div>
-      			</div>
-    		</div>
+    	<div class="rectangle-parent">
+      		<div class="group-child">
+      		</div>
+      		<form class="sign-in-button-parent" id="registroForm">
+				<b class="registrarse1">registrarse</b>
+				<div class="por-favor-proporcinenos">Por favor proporciónenos su información para crear su cuenta</div>
+				<div class="nombre">Nombre</div>
+				<div class="descripcion">
+					<input type="text" id="nombre" class="name-field" placeholder="Ingrese su nombre">
+        		</div>
+        		<div class="apellido">Apellido</div>
+				<div class="descripcion">
+					<input type="text" id="apellido" class="name-field1" placeholder="Ingrese su apellido">
+			  	</div>
+        		<div class="direccin-de-correo">Dirección de correo electrónico</div>
+				<div class="descripcion">
+					<input type="text" id="correo" class="field" placeholder="Contact@gmail.com">
+			  	</div>
+				<div class="contrasea">Contraseña</div>
+				<div class="descripcion">
+					<input type="password" id="contrasena" class="field1" placeholder="************">
+			  </div>
+        		<div class="confimar-contrasea">Confimar Contraseña</div>
+        		<div class="descripcion">
+					<input type="password" id="confirmarContrasena" class="field2" placeholder="************">
+        		</div>
+				<div class="ya-tienes-una-cuenta-parent">
+					<div class="ya-tienes-una">¿Ya tienes una cuenta?</div>
+					<div class="iniciar-sesin" id="iniciarSesinText">Iniciar sesión</div>
+			  	</div>
+				<button type="submit" class="sign-in-button" id="signInButton">Registrarse</button>
+      		</form>
+    	</div>
   	</div>
-  	
-  	
-  	
-  	
-  	<script>
-    		var signInButton = document.getElementById("signInButton");
-    		if(signInButton) {
-      			signInButton.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var iniciarSesinText = document.getElementById("iniciarSesinText");
-    		if(iniciarSesinText) {
-      			iniciarSesinText.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+  	<script src="./JS/registro.js"></script>
 </html>
