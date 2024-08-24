@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+:root{
+    --color-barra-lateral:rgb(255,255,255);
+
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu:rgb(134,136,144);
+
+    --color-menu-hover:rgb(238,238,238);
+    --color-menu-hover-texto:rgb(0,0,0);
+
+    --color-boton:rgb(0,0,0);
+    --color-boton-texto:rgb(255,255,255);
+
+    --color-linea:rgb(180,180,180);
+
+    --color-switch-base :rgb(201,202,206);
+    --color-switch-circulo:rgb(241,241,241);
+
+    --color-scroll:rgb(192,192,192);
+    --color-scroll-hover:rgb(134,134,134);
+}
+
+.dark-mode{
+    --color-barra-lateral:rgb(44,45,49);
+
+    --color-texto:rgb(255,255,255);
+    --color-texto-menu:rgb(110,110,117);
+
+    --color-menu-hover:rgb(0,0,0);
+    --color-menu-hover-texto:rgb(238,238,238);
+
+    --color-boton:rgb(255,255,255);
+    --color-boton-texto:rgb(0,0,0);
+
+    --color-linea:rgb(90,90,90);
+
+    --color-switch-base :rgb(39,205,64);
+    --color-switch-circulo:rgb(255,255,255);
+
+    --color-scroll:rgb(68,69,74);
+    --color-scroll-hover:rgb(85,85,85);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+/*-----------------Menu*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+
+/*----------------Barra Lateral*/
+.barra-lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color:#EDC6C6;
+    transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    z-index: 50;
+    
+}
+//background:linear-gradient(90deg, #f12711, #f5af19);
+.mini-barra-lateral{
+    width: 80px;
+}
+.barra-lateral span{
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease,width 0.5s ease;
+}
+.barra-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+/*------------> Nombre de la página */
+.barra-lateral .nombre-pagina{
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.barra-lateral .nombre-pagina ion-icon{
+    min-width: 50px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.barra-lateral .nombre-pagina span{
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+
+/*------------> Botón*/
+.barra-lateral .boton{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+}
+.barra-lateral .boton ion-icon{
+    min-width: 50px;
+    font-size: 25px;
+}
+
+
+/*--------------> Menu Navegación*/
+.barra-lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.barra-lateral .navegacion::-webkit-scrollbar{
+    width: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-scroll);
+    border-radius: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scroll-hover);
+}
+.barra-lateral .navegacion li{  
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+.barra-lateral .navegacion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+.barra-lateral .navegacion a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+.barra-lateral .navegacion ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/*-----------------> Linea*/
+.barra-lateral .linea{
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+    background-color: var(--color-linea);
+}
+
+/*----------------> Modo Oscuro*/
+.barra-lateral .modo-oscuro{
+    width: 100%;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.barra-lateral .modo-oscuro .info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+}
+.barra-lateral .modo-oscuro ion-icon{
+
+    width: 50px;
+    font-size: 20px;
+}
+
+/*--->switch*/
+.barra-lateral .modo-oscuro .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+.barra-lateral .modo-oscuro .base{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    background-color: var(--color-switch-base);
+    border-radius: 50px;
+}
+.barra-lateral .modo-oscuro .circulo{
+    position: absolute;
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-switch-circulo);
+    border-radius: 50%;
+    left: 2px;
+    transition: left 0.5s ease;
+}
+.barra-lateral .modo-oscuro .circulo.prendido{
+    left: 15px;
+}
+
+/*---------------> Usuario*/
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+.barra-lateral .usuario img{
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+}
+.barra-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto);
+    overflow: hidden;
+}
+.barra-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.barra-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: 600;
+}
+.barra-lateral .usuario .email{
+    font-size: 13px;
+}
+.barra-lateral .usuario ion-icon{
+    font-size: 20px;
+}
+
+
+/*-------------main*/
+
+#miDia{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+#miDia2{
+    background:linear-gradient(90deg, #f12711, #f5af19);
+    color: var(--color-menu-hover-texto);
+}
+
+main{
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+main.min-main{
+    margin-left: 80px;
+}
+
+.large-icon {
+    font-size: 32px;  /* Ajusta el tamaño del ícono (puedes cambiar el valor según lo que necesites) */
+    width: 32px;      /* Asegura que el ícono tenga un ancho acorde al tamaño */
+    height: 32px;     /* Asegura que el ícono tenga una altura acorde al tamaño */
+}
+.titulo-encabezado-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background: linear-gradient(90deg, #f12711, #f5af19);
+}
+.dia-fecha {
+    position: absolute;
+    top: 160px;
+    left: 66px;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: inline-block;
+    width: 315.5px;
+}
+.titulo-1 {
+    position: absolute;
+    top: 71px;
+    left: 66px;
+    font-size: 96px;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: inline-block;
+    width: 758px;
+}
+.titulo-encabezado {
+    width: 100%;
+    position: relative;
+    height: 238px;
+    text-align: left;
+    font-size: 40px;
+    color: #000;
+    font-family: 'Patrick Hand';
+}
+
+.titulo-2 {
+    position: absolute;
+    height: 45.89%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.objects-thingscalender {
+    position: absolute;
+    height: 44.44%;
+    width: 7.96%;
+    top: 55.07%;
+    right: 63.62%;
+    bottom: 0.48%;
+    left: 28.42%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.fecha {
+    position: absolute;
+    height: 45.89%;
+    width: 71.01%;
+    top: 54.11%;
+    left: 13.19%;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opciones-agregar {
+    width: 100%;
+    position: relative;
+    height: 103.5px;
+    text-align: center;
+    font-size: 35px;
+    color: #431414;
+    font-family: 'Patrick Hand';
+}
+
+
+.opciones-agregar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;   /* Borde opcional para resaltar el rectángulo */
+    border-radius: 8px;       /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo del rectángulo */
+    width: 100%;             /* Ajusta el ancho según necesites */
+    margin-bottom: 20px;      /* Espacio inferior */
+}
+
+
+.opcion-fecha {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #000;   /* Color negro para el botón */
+    border: none;
+    border-radius: 8px;       /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;              /* Botón grande que ocupe todo el ancho del contenedor */
+}
+
+.boton:hover {
+    background-color: #333;   /* Color del botón al pasar el ratón por encima */
+}
+
+.boton ion-icon {
+    font-size: 24px;
+    margin-right: 1px;       /* Espacio entre el icono y el texto */
+}
+
+.fondo-calendario-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #fff;
+}
+.arrowschevron-left-icon {
+    width: 100%;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.january-2022 {
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.text {
+    width: 20px;
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    flex-shrink: 0;
+}
+.calendarbase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+.weekdays {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.calendarbase7 {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+.calendarbase13 {
+    flex: 1;
+    background-color: #ffeae8;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    color: #431414;
+}
+.calendarbase14 {
+    flex: 1;
+    background-color: #ffeae8;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+}
+.row05 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #431414;
+}
+.calendarbase25 {
+    flex: 1;
+    background-color: #431414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    color: #fff;
+}
+.rows {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #591a1a;
+}
+.calendar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 24px;
+    border: 1px solid #431414;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px;
+}
+.calendario1 {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 4.7%;
+    right: 8.99%;
+    bottom: 45.3%;
+    left: 9.1%;
+}
+.fondo-calendario {
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    width: 90%;
+    height: 110%;
+}
+.nueva-tarea-child {
+    position: absolute;
+    height: 100%;
+    width: 105%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #ffeae8;
+}
+.motivo {
+    position: absolute;
+    top: 61.99%;
+    left: 75.77%;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+}
+.text49 {
+    position: relative;
+    letter-spacing: 0.02em;
+    z-index: 0;
+}
+.arrowschevron-down-sm-icon {
+    width: 24px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 12px);
+    right: 10px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.dropdown {
+    position: absolute;
+    height: 13.71%;
+    width: 20.85%;
+    top: 75.39%;
+    right: 3.7%;
+    bottom: 10.9%;
+    left: 75.45%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #431414;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 36px 12px 16px;
+    gap: 8px;
+}
+.image-base-icon {
+    position: absolute;
+    height: 69.47%;
+    width: 28.78%;
+    top: 21.81%;
+    right: 25.61%;
+    bottom: 8.72%;
+    left: 45.61%;
+    border-radius: 2px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.text50 {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 24px;
+}
+.text-field {
+    position: absolute;
+    height: 13.4%;
+    width: 41.9%;
+    top: 21.81%;
+    right: 55.45%;
+    bottom: 64.8%;
+    left: 2.65%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #431414;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 48px 12px 14px;
+    font-size: 24px;
+}
+.text51 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    display: -webkit-inline-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    z-index: 0;
+}
+.actions-uiresizer {
+    width: 24px;
+    position: absolute;
+    margin: 0 !important;
+    right: 4px;
+    bottom: 4px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+.text-box {
+    position: absolute;
+    height: 50.16%;
+    width: 42.01%;
+    top: 41.12%;
+    right: 55.45%;
+    bottom: 8.72%;
+    left: 2.54%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #431414;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 16px 16px;
+    gap: 10px;
+    font-size: 20px;
+}
+.value {
+    flex: 1;
+    position: relative;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    height: 24px;
+}
+.field {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #431414;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+}
+.label {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+}
+.tab {
+    border-radius: 8px;
+    background-color: #431414;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+}
+.tab1 {
+    border-radius: 0px 8px 8px 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: #431414;
+}
+.yes-no {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #ffeae8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #fff;
+}
+.time-field {
+    position: absolute;
+    height: 12.46%;
+    width: 20.42%;
+    top: 41.12%;
+    right: 3.81%;
+    bottom: 46.42%;
+    left: 75.77%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: right;
+    font-family: 'Inter Variable';
+}
+.titulo-3 {
+    position: absolute;
+    top: 6.85%;
+    left: 2.65%;
+    font-size: 36px;
+    line-height: 24px;
+    text-align: right;
+}
+.field1 {
+    position: absolute;
+    height: 13.4%;
+    width: 20.74%;
+    top: 21.81%;
+    right: 3.81%;
+    bottom: 64.8%;
+    left: 75.45%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #431414;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    gap: 8px;
+    text-align: right;
+    color: #591a1a;
+    font-family: 'Inter Variable';
+}
+.actions-uiupload {
+    position: absolute;
+    height: 7.48%;
+    width: 2.54%;
+    top: 76.95%;
+    right: 27.83%;
+    bottom: 15.58%;
+    left: 69.63%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.nueva-tarea {
+    position: absolute;
+    top: 80%;
+    left: 0px;
+    width: 94%;
+    height: 60%;
+    text-align: left;
+    font-size: 16px;
+}
+.calendario {
+    width: 100%;
+    position: relative;
+    height: 788px;
+    text-align: center;
+    font-size: 18px;
+    color: #431414;
+    font-family: 'Patrick Hand';
+}
+
+
+/*------------------> Responsive*/
+@media (max-height: 660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+    .barra-lateral .modo-oscuro{
+        margin-bottom: 3px;
+    }
+}
+@media (max-width: 600px){
+    .barra-lateral{
+        position: fixed;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
+    }
+    
+}
