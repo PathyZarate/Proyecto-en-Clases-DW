@@ -1,4 +1,3 @@
-// Función para mostrar todas las tareas completadas
 function showCompletedTasks() {
     const completedTasks = JSON.parse(localStorage.getItem('completedTasks')) || [];
     const completedTaskDiv = document.getElementById('completedTask');
@@ -21,5 +20,4 @@ function showCompletedTasks() {
     }
 }
 
-// Mostrar las tareas completadas al cargar la página
 document.addEventListener('DOMContentLoaded', showCompletedTasks);

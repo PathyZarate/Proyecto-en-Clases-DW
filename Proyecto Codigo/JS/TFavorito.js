@@ -1,4 +1,3 @@
-// Función para mostrar todas las tareas favoritas
 function showFavoriteTasks() {
     const favoriteTasks = JSON.parse(localStorage.getItem('favoriteTasks')) || [];
     const favoritoTaskDiv = document.getElementById('favoritoTask');
@@ -21,5 +20,4 @@ function showFavoriteTasks() {
     }
 }
 
-// Mostrar las tareas favoritas al cargar la página
 document.addEventListener('DOMContentLoaded', showFavoriteTasks);

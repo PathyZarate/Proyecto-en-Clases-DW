@@ -1,4 +1,3 @@
-// Función para mostrar las tareas específicas
 function showTasks() {
     const tasks = JSON.parse(localStorage.getItem('Espalda y biceps')) || [];
     const taskDetails = document.getElementById('taskDetails');
@@ -21,5 +20,4 @@ function showTasks() {
     }
 }
 
-// Mostrar las tareas al cargar la página
 document.addEventListener('DOMContentLoaded', showTasks);

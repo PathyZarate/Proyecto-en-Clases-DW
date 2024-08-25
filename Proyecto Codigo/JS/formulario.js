@@ -5,7 +5,6 @@ const newTimeInput = document.getElementById('time-input');
 const newMotivoInput = document.getElementById('am-pm-selector');
 const addTaskButton = document.getElementById('addTask');
 
-// Función para agregar una nueva tarea
 function addTask() {
     const text = newTaskInput.value.trim();
     const desc = newDescInput.value.trim();
@@ -17,16 +16,13 @@ function addTask() {
         let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.push({ text, desc, date, time, motivo, completed: false });
         localStorage.setItem('tasks', JSON.stringify(tasks));
-        
-        // Guardar la tarea en una entrada específica según el motivo seleccionado
+
         let specificTasks = JSON.parse(localStorage.getItem(motivo)) || [];
         specificTasks.push({ text, desc, date, time, motivo, completed: false });
         localStorage.setItem(motivo, JSON.stringify(specificTasks));
-        
-        // Redirigir a index.html
+
         window.location.href = 'index.html';
     }
 }
 
-// Evento
 addTaskButton.addEventListener('click', addTask);

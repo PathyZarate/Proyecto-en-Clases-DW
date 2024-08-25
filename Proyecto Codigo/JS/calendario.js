@@ -44,15 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 dayCell.classList.add('selected');
                 selectedDayElement = dayCell;
 
-                // Actualizar el campo de fecha seleccionada
                 const selectedDate = new Date(year, month, day);
                 selectedDateElement.textContent = selectedDate.toLocaleDateString('es-ES');
             });
             dayCell.addEventListener('mouseover', function() {
-                dayCell.style.backgroundColor = '#f12711'; // Cambia el color aquí
+                dayCell.style.backgroundColor = '#f12711';
             });
             dayCell.addEventListener('mouseout', function() {
-                dayCell.style.backgroundColor = ''; // Vuelve al color original
+                dayCell.style.backgroundColor = '';
             });
             weekRow.appendChild(dayCell);
         }
