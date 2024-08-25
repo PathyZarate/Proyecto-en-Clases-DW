@@ -107,230 +107,76 @@
         </div>
 
     </div>
-
-
+    
     <main>
         <div class="titulo-encabezado">
             <div class="titulo-encabezado-child">
             </div>
-            <div class="dia-fecha">Dia, Fecha</div>
+            <div class="dia-fecha" id="dia-fecha"></div>
             <div class="titulo-1">Calendario</div>
         </div>
         <div class="calendario">
             <div class="fondo-calendario">
-            <div class="fondo-calendario-child">
+                <div class="fondo-calendario-child"></div>
+                <div class="calendario1">
+                    <div class="calendar">
+                        <div class="header">
+                            <a href="#" id="prev">
+                            <ion-icon id="flecha" name="arrow-back-outline"></ion-icon>
+                            </a>
+                            <div class="month-year" id="month-year">Agosto 2024</div>
+                            <a href="#" id="next">
+                            <ion-icon id="flecha" name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="weekdays">
+                            <div class="calendarbase"><div class="text">DOM</div></div>
+                            <div class="calendarbase"><div class="text">LUN</div></div>
+                            <div class="calendarbase"><div class="text">MAR</div></div>
+                            <div class="calendarbase"><div class="text">MIE</div></div>
+                            <div class="calendarbase"><div class="text">JUE</div></div>
+                            <div class="calendarbase"><div class="text">VIE</div></div>
+                            <div class="calendarbase"><div class="text">SAB</div></div>
+                        </div>
+                        <div class="rows" id="days-container">
+                            <!-- Aquí se generarán los días del mes -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="calendario1">
-            <div class="calendar">
-            <div class="header">
-            <a href="">
-                <ion-icon id="flecha" name="arrow-back-outline"></ion-icon>
-            </a>
-            <div class="january-2022">Agosto 2024</div>
-            <a href="">
-                <ion-icon id="flecha" name="arrow-forward-outline"></ion-icon>
-            </a>
-            </div>
-            <div class="weekdays">
-            <div class="calendarbase">
-            <div class="text">M</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">T</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">W</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">Th</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">F</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">S</div>
-            </div>
-            <div class="calendarbase">
-            <div class="text">Su</div>
-            </div>
-            </div>
-            <div class="rows">
-            <div class="weekdays">
-            <div class="calendarbase7">
-            <div class="text">26</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">27</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">28</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">29</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">30</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">31</div>
-            </div>
-            <div class="calendarbase13">
-            <div class="text">1</div>
-            </div>
-            </div>
-            <div class="row05">
-            <div class="calendarbase14">
-            <div class="text">2</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">3</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">4</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">5</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">6</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">7</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">8</div>
-            </div>
-            </div>
-            <div class="row05">
-            <div class="calendarbase14">
-            <div class="text">9</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">10</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">11</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">12</div>
-            </div>
-            <div class="calendarbase25">
-            <div class="text">13</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">14</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">15</div>
-            </div>
-            </div>
-            <div class="row05">
-            <div class="calendarbase14">
-            <div class="text">16</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">17</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">18</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">19</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">20</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">21</div>
-            </div>
-            <div class="calendarbase14">
-            <div class="text">22</div>
-            </div>
-            </div>
-            <div class="weekdays">
-            <div class="calendarbase13">
-            <div class="text">23</div>
-            </div>
-            <div class="calendarbase13">
-            <div class="text">24</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">25</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">26</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">27</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">28</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">29</div>
-            </div>
-            </div>
-            <div class="weekdays">
-            <div class="calendarbase13">
-            <div class="text">30</div>
-            </div>
-            <div class="calendarbase13">
-            <div class="text">31</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">1</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">2</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">3</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">4</div>
-            </div>
-            <div class="calendarbase7">
-            <div class="text">5</div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
+
             <div class="nueva-tarea">
-                <div class="nueva-tarea-child">
+                <div class="nueva-tarea-child"></div>
+                <div class="titulo-3">Agrega una nueva tarea!</div>
+                <input type="text" class="text-field" id="titulo" placeholder="Título">
+                <textarea name="desc" class="text-box" id="descripcion" placeholder="Descripción"></textarea>
+                <div class="field1"><div class="value" id="selected-date">DD/MM/YYYY</div></div>
+                <div class="time-field">
+                    <input type="time" id="time-input" class="field">
                 </div>
                 <div class="motivo">Motivo: </div>
-            <div class="dropdown">
-            <div class="text49">Select</div>
-            </div>
-            <div class="text-field">
-            <div class="text50">Título </div>
-            </div>
-            <div class="text-box">
-            <div class="text51">Descripción </div>
-            </div>
-            <div class="time-field">
-            <div class="field">
-            <div class="value">9:30</div>
-            </div>
-            <div class="yes-no">
-            <div class="tab">
-            <div class="label">AM</div>
-            </div>
-            <div class="tab1">
-            <div class="label">PM</div>
-            </div>
-            </div>
-            </div>
-            <div class="titulo-3">Agrega una nueva tarea!</div>
-            <div class="field1">
-            <div class="value">DD/MM/YYYY</div>
-            </div>
+                <select id="am-pm-selector" class="dropdown">
+                    <option value="" class="text49">Select</option>
+                    <option value="Pecho y triceps">Pecho y triceps</option>
+                    <option value="Espalda y biceps">Espalda y biceps</option>
+                    <option value="Hombro y abdominales">Hombro y abdominales</option>
+                    <option value="Piernas y gluteos">Piernas y gluteos</option>
+                    <option value="Cardio">Cardio</option>
+                    <option value="Fuerza">Fuerza</option>
+                </select>
+                <div>
+                    <button class="boton1">
+                        <ion-icon id="addTask" name="add-outline"></ion-icon>
+                        <span>Nueva Tarea</span>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
 
+    <script src="/Proyecto Codigo/JS/fecha.js"></script>
+    <script src="/Proyecto Codigo/JS/calendario.js"></script>
+    <script src="/Proyecto Codigo/JS/formulario.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
