@@ -4,10 +4,10 @@ function showFavoriteTasks() {
     const favoritoTaskDiv = document.getElementById('favoritoTask');
             
     if (favoriteTasks.length > 0) {
-        favoritoTaskDiv.innerHTML = '<h2>Tareas Favoritas</h2>';
         favoriteTasks.forEach(task => {
             const taskDiv = document.createElement('div');
             taskDiv.innerHTML = `
+                <h2>Tarea Favorita</h2>
                 <p><strong>Título:</strong> ${task.text}</p>
                 <p><strong>Descripción:</strong> ${task.desc}</p>
                 <p><strong>Fecha:</strong> ${task.date}</p>

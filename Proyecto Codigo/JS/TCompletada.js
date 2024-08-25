@@ -4,10 +4,10 @@ function showCompletedTasks() {
     const completedTaskDiv = document.getElementById('completedTask');
     
     if (completedTasks.length > 0) {
-        completedTaskDiv.innerHTML = '<h2>Tareas Completadas</h2>';
         completedTasks.forEach(task => {
             const taskDiv = document.createElement('div');
             taskDiv.innerHTML = `
+                <h2>Tarea Completada</h2>
                 <p><strong>Título:</strong> ${task.text}</p>
                 <p><strong>Descripción:</strong> ${task.desc}</p>
                 <p><strong>Fecha:</strong> ${task.date}</p>
