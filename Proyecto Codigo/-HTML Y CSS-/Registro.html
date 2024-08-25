@@ -10,41 +10,42 @@
 
 </head>  
 <body>
- <form class="formulario">
+ <form class="formulario" id="registroForm">
     
     <h1>Registrate</h1>
      <div class="contenedor">
      
      <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
-         <input class="fondo" type="text" placeholder="Nombre ">
+         <input class="fondo" id="nombre" type="text" placeholder="Nombre ">
          
         </div>
         <div class="input-contenedor">
             <i class="fas fa-user icon"></i>
-            <input class="fondo" type="text" placeholder="Apellido">
+            <input class="fondo" id="apellido" type="text" placeholder="Apellido">
             
            </div>
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
-         <input class="fondo" type="text" placeholder="Correo Electronico">
+         <input class="fondo" id="correo" type="text" placeholder="Correo Electronico">
          
          </div>
          
          <div class="input-contenedor">
             <i class="fas fa-key icon"></i>
-         <input class="fondo" type="password" placeholder="Contraseña">
+         <input class="fondo" id="contrasena" type="password" placeholder="Contraseña">
          
          </div>
          <div class="input-contenedor">
             <i class="fas fa-key icon"></i>
-         <input class="fondo" type="password" placeholder="Confirmar Contraseña">
+         <input class="fondo" id="confirmarContrasena" type="password" placeholder="Confirmar Contraseña">
          
          </div>
          <input type="submit" value="Registrate" class="button">
-         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
          <p>¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
      </div>
     </form>
+
+    <script src="/Proyecto Codigo/JS/registro.js"></script>
 </body>
 </html>

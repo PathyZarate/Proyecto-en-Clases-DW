@@ -15,7 +15,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     }
 
     alert('Formulario enviado correctamente.');
-
+    window.location.href = 'index.html';
 });
 
 function validarEmail(email) {

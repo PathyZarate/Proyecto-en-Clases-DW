@@ -36,6 +36,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
         return;
     }
     alert('Formulario enviado correctamente.');
+    window.location.href = 'login.html';
 });
 
 function validateEmail(email) {
