@@ -17,7 +17,14 @@ function addTask() {
         let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.push({ text, desc, date, time, motivo, completed: false });
         localStorage.setItem('tasks', JSON.stringify(tasks));
-        window.location.href = 'index.html'; // Redirigir a index.html
+        
+        // Guardar la tarea en una entrada específica según el motivo seleccionado
+        let specificTasks = JSON.parse(localStorage.getItem(motivo)) || [];
+        specificTasks.push({ text, desc, date, time, motivo, completed: false });
+        localStorage.setItem(motivo, JSON.stringify(specificTasks));
+        
+        // Redirigir a index.html
+        window.location.href = 'index.html';
     }
 }
 

@@ -1,21 +1,25 @@
-// Función para mostrar la tarea completada
-function showCompletedTask() {
-    const favoritoTask = JSON.parse(localStorage.getItem('favoritoTask'));
+// Función para mostrar todas las tareas favoritas
+function showFavoriteTasks() {
+    const favoriteTasks = JSON.parse(localStorage.getItem('favoriteTasks')) || [];
     const favoritoTaskDiv = document.getElementById('favoritoTask');
-    
-    if (favoritoTask) {
-        favoritoTaskDiv.innerHTML = `
-            <h2>Tarea Completada</h2>
-            <p><strong>Título:</strong> ${favoritoTask.text}</p>
-            <p><strong>Descripción:</strong> ${favoritoTask.desc}</p>
-            <p><strong>Fecha:</strong> ${favoritoTask.date}</p>
-            <p><strong>Hora:</strong> ${favoritoTask.time}</p>
-            <p><strong>Motivo:</strong> ${favoritoTask.motivo}</p>
-        `;
+            
+    if (favoriteTasks.length > 0) {
+        favoritoTaskDiv.innerHTML = '<h2>Tareas Favoritas</h2>';
+        favoriteTasks.forEach(task => {
+            const taskDiv = document.createElement('div');
+            taskDiv.innerHTML = `
+                <p><strong>Título:</strong> ${task.text}</p>
+                <p><strong>Descripción:</strong> ${task.desc}</p>
+                <p><strong>Fecha:</strong> ${task.date}</p>
+                <p><strong>Hora:</strong> ${task.time}</p>
+                <p><strong>Motivo:</strong> ${task.motivo}</p>
+            `;
+            favoritoTaskDiv.appendChild(taskDiv);
+        });
     } else {
-        favoritoTaskDiv.innerHTML = '<p>No hay tarea favorita.</p>';
+        favoritoTaskDiv.innerHTML = '<p>No hay tareas favoritas.</p>';
     }
 }
 
-// Mostrar la tarea completada al cargar la página
-document.addEventListener('DOMContentLoaded', showCompletedTask);
+// Mostrar las tareas favoritas al cargar la página
+document.addEventListener('DOMContentLoaded', showFavoriteTasks);
