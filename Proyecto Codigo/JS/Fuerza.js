@@ -1,5 +1,5 @@
 function showTasks() {
-    const tasks = JSON.parse(localStorage.getItem('Cardio')) || [];
+    const tasks = JSON.parse(localStorage.getItem('Fuerza')) || [];
     const taskDetails = document.getElementById('taskDetails');
     
     if (tasks.length > 0) {
@@ -7,7 +7,7 @@ function showTasks() {
             const taskDiv = document.createElement('div');
             taskDiv.className = 'opciones-agregar2'
             taskDiv.innerHTML = `
-                <h2>Tarea: Cardio</h2>
+                <h2>Tarea: Fuerza</h2>
                 <p><strong>Título:</strong> ${task.text}</p>
                 <p><strong>Descripción:</strong> ${task.desc}</p>
                 <p><strong>Fecha:</strong> ${task.date}</p>
