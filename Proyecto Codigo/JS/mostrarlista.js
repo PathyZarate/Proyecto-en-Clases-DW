@@ -4,6 +4,7 @@ function renderTasks(tasksToRender) {
     taskList.innerHTML = '';
     tasksToRender.forEach((task, index) => {
         const li = document.createElement('li');
+        li.className = 'opciones-agregar2';
         li.innerHTML = `
             <span class="${task.completed ? 'completed' : ''}">Titulo: ${task.text}</span>
             <p>Descripcion: ${task.desc}</p>
@@ -16,14 +17,13 @@ function renderTasks(tasksToRender) {
         `;
 
         li.querySelector('.complete').addEventListener('click', () => markAsCompleted(index));
-
         li.querySelector('.favorite').addEventListener('click', () => markAsFavorite(index));
-
         li.querySelector('.delete').addEventListener('click', () => deleteTask(index));
                 
         taskList.appendChild(li);
     });
 }
+
 
 function markAsCompleted(index) {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];

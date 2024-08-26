@@ -5,6 +5,7 @@ function showCompletedTasks() {
     if (completedTasks.length > 0) {
         completedTasks.forEach(task => {
             const taskDiv = document.createElement('div');
+             taskDiv.className = 'opciones-agregar2'
             taskDiv.innerHTML = `
                 <h2>Tarea Completada</h2>
                 <p><strong>Título:</strong> ${task.text}</p>

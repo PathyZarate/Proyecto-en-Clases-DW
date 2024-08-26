@@ -5,6 +5,7 @@ function showTasks() {
     if (tasks.length > 0) {
         tasks.forEach(task => {
             const taskDiv = document.createElement('div');
+             taskDiv.className = 'opciones-agregar2'
             taskDiv.innerHTML = `
                 <h2>Tarea: Piernas y gluteos</h2>
                 <p><strong>Título:</strong> ${task.text}</p>

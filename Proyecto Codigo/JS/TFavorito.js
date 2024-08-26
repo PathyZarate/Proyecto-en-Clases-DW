@@ -5,6 +5,7 @@ function showFavoriteTasks() {
     if (favoriteTasks.length > 0) {
         favoriteTasks.forEach(task => {
             const taskDiv = document.createElement('div');
+             taskDiv.className = 'opciones-agregar2'
             taskDiv.innerHTML = `
                 <h2>Tarea Favorita</h2>
                 <p><strong>Título:</strong> ${task.text}</p>
